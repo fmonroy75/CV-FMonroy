@@ -1,0 +1,70 @@
+﻿		
+p { 
+	
+	font-family: "Open Sans",  sans-serif; 
+	font-size: 10pt; 
+	font-style: normal;
+	text-align:justify; 
+			
+}
+h1 { 
+	font-family: "Open Sans",  sans-serif; 
+	font-size: 18pt; 
+	font-style: italic;
+	text-align:center; 
+			
+	}
+h2 { 
+	font-family: "Open Sans",  sans-serif; 
+	font-size: 14pt; 
+	font-style: italic;
+	text-align:left; 
+	font-weight:bold;
+			
+	}
+
+	p.cabecera,h3 { 
+	font-family: "Open Sans", sans-serif; 
+	font-size: 12pt; 
+	font-style: italic;
+	text-align:center; 
+}
+
+div,li,p.normal { 
+			
+	font-family: "Open Sans",  sans-serif; 
+	font-size: 10pt; 
+	font-style:normal;
+	text-align:left; 
+	font-weight:normal;
+			
+	}
+div,p.cursiva { 
+			
+	font-family: "Open Sans",  sans-serif; 
+	font-size: 10pt; 
+	font-style: italic;
+	text-align:left; 
+	font-weight:bold;
+			
+	}
+table{
+	width:80%
+}
+td.der{
+	width:80%;
+	vertical-align:text-top;
+			
+}
+td.izq{
+	width:20%;
+	vertical-align:text-top;
+			
+}
+		
+	
+a:link { 
+	color: #0000ff; 
+	text-decoration: underline ;
+}
+
