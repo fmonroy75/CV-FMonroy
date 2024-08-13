@@ -48,13 +48,13 @@
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5">
             <li class="nav-item">
               <a class="nav-link text-white" href="#about">Acerca de</a>
-            </li>            
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#resume">Curriculum</a>
+            </li>                         
             <li class="nav-item">
               <a class="nav-link text-white" href="#studies">Estudios</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#resume">Curriculum</a>
-            </li>            
             <li class="nav-item">
               <a class="nav-link text-white" href="#contact">Contacto</a>
             </li>
@@ -80,10 +80,10 @@
           <h1   class="text-black display-1 fw-bold my-5">
             Francisco Monroy H.
           </h1>
-          <p  class="text-black display-2 fs-4 my-5">
-            Ingeniro en Informática
+          <p  class="text-black display-2 fs-4 my-3">
+            Ingeniero en Informática
           </p>
-          <div class="mb-5 pb-2">
+          <div class="mb-1 pb-1">
             <a href="mailto:francisco.monroy@gmail.com"><span  class="text-black display-1 fs-5 my-5">
               Francisco.monroy@gmail.com
             </span></a>
@@ -92,13 +92,14 @@
       </div>
     </div>
     </header>
-
+    <div  id="about" class="separator mx-5"></div> <!-- Línea separadora --> 
+    <section  id="about" class="about section p-3" data-bs-spy="scroll">
     <!-- About Section -->
-    <section id="about" class="about section p-3" data-bs-spy="scroll">
+    <section class="about section p-3" data-bs-spy="scroll">
       <!-- Section Title -->
       <div class="container section-title" >
         <h2 class="text-center">Acerca de </h2>
-        <p>
+        <p id="resumen">
           Ingeniero de Gestión y Sistemas. Profesional con experiencia y conocimientos en evaluación, gestión, administración e implementación de proyectos tecnológicos y operativos, supervisión de servicios externos, auditoría de procesos, mejora de procesos, análisis de datos, administración de proveedores, administración de presupuesto. Liderazgo, capacidad analítica y orientación al logro. Excelentes habilidades de comunicación, resolución de problemas y gestión de relaciones.
         </p>
       </div><!-- End Section Title -->
@@ -126,73 +127,10 @@
         </div>
       </div>
     </section><!-- /About Section -->
-
-
-    <!-- Resume Section -->
-    <section id="studies" class="resume section p-2" data-bs-spy="scroll">
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2 class="text-center">Estudios</h2>
-      </div><!-- End Section Title -->
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Educación</h3>
-
-            <div class="resume-item">
-              <h4>Titulado de Ingeniería Civil Industrial</h4>
-              <h5>2005 - 2008</h5>
-              <p>Universidad de Las Américas </p>
-              <p>Santiago de Chile, 2008</p>
-            </div><!-- Edn Resume Item -->
-
-            <div class="resume-item">
-              <h4>Titulado de la Carrera de Ingeniería en Ejecución en informática</h4>
-              <h5>1996 - 2001</h5>
-              <p>Instituto CIISA </p>
-              <p>Santiago de Chile, 2001</p>
-            </div><!-- Edn Resume Item -->
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="resume-title">Cursos</h3>
-            <div class="resume-item">
-              <h4>Data Sciences y Python</h4>
-              <h5>2023</h5>
-              <p>Talento Digital<br>
-              Santiago de Chile</p>
-            </div><!-- Edn Resume Item -->
-            <div class="resume-item">
-              <h4>SAP MM</h4>
-              <h5>2021</h5>
-              <p>Buffa Sistemas<br>
-              Buenos Aires, Argentina</p>
-            </div><!-- Edn Resume Item -->
-            <div class="resume-item">
-              <h4>Curso de Finanzas para no especialistas</h4>
-              <h5>2017</h5>
-              <p>Universidad Santo Tomás <br>
-              Santiago de Chile</p>
-            </div><!-- Edn Resume Item --> 
-
-            <div class="resume-item">
-              <h4>Curseo de Marketing y ventas</h4>
-              <h5>2017</h5>
-              <p>University of Chile<br>
-              Santiago de Chile</p>
-            </div><!-- Edn Resume Item -->                        
-            <div class="resume-item">
-              <h4>Diplomado Sistemas de Gestión Integral con certificación de Auditor Interno ISO 9001, 14001, 18001</h4>
-              <h5>2012</h5>
-              <p>Universidad del Desarrollo<br>
-              Santiago de Chile</p>
-            </div><!-- Edn Resume Item -->                        
-        </div>
-      </div>
-    </section><!-- /Resume Section -->
+    <div id="resume" class="separator mx-5"></div> <!-- Línea separadora --> 
 
     <!-- Resume Section -->
-    <section id="resume" class="resume section" data-bs-spy="scroll">
+    <section  class="resume section" data-bs-spy="scroll">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -212,7 +150,7 @@
                 <li>Aprender el sistema Murex y los requisitos del proyecto en un plazo de seis meses;</li>
                 <li>Realizar controles de calidad del producto final antes de la entrega;</li>
                 <li>Trabajar en executions scripts, script batch extensions y otras estructuras de scripts en el sistema Murex;</li>
-                <li>Tecnologìa: Murex, Oracle.</li>
+                <li>Tecnología: Murex, Oracle.</li>
               </ul>
             </div><!-- Edn Resume Item -->
 
@@ -305,7 +243,7 @@
             <div class="resume-item">
               <h4>Analista Programador. </h4>
               <h5>1998 - 1999</h5>
-              <p><em>ATM Gestión, I. MUNICIPALIDAD DE CONCHALÍ (Goberment)</em></p>
+              <p><em>ATM Gestión, I. MUNICIPALIDAD DE CONCHALÍ (Gobierno)</em></p>
               <ul>
                 <li>Analizar y programar diversos sistemas;</li>
                 <li>Technología: ASP, Visual Basic, SQL.</li>
@@ -329,16 +267,79 @@
       </div>
 
     </section><!-- /Resume Section -->
+    <div id="studies" class="separator mx-5"></div> <!-- Línea separadora --> 
 
+    <!-- Resume Section -->
+    <section class="resume section p-2" data-bs-spy="scroll">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="text-center">Estudios</h2>
+      </div><!-- End Section Title -->
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Educación</h3>
 
+            <div class="resume-item">
+              <h4>Titulado de Ingeniería Civil Industrial</h4>
+              <h5>2005 - 2008</h5>
+              <p>Universidad de Las Américas </p>
+              <p>Santiago de Chile, 2008</p>
+            </div><!-- Edn Resume Item -->
+
+            <div class="resume-item">
+              <h4>Titulado de la Carrera de Ingeniería en Ejecución en informática</h4>
+              <h5>1996 - 2001</h5>
+              <p>Instituto CIISA </p>
+              <p>Santiago de Chile, 2001</p>
+            </div><!-- Edn Resume Item -->
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Cursos</h3>
+            <div class="resume-item">
+              <h4>Data Sciences y Python</h4>
+              <h5>2023</h5>
+              <p>Talento Digital<br>
+              Santiago de Chile</p>
+            </div><!-- Edn Resume Item -->
+            <div class="resume-item">
+              <h4>SAP MM</h4>
+              <h5>2021</h5>
+              <p>Buffa Sistemas<br>
+              Buenos Aires, Argentina</p>
+            </div><!-- Edn Resume Item -->
+            <div class="resume-item">
+              <h4>Curso de Finanzas para no especialistas</h4>
+              <h5>2017</h5>
+              <p>Universidad Santo Tomás <br>
+              Santiago de Chile</p>
+            </div><!-- Edn Resume Item --> 
+
+            <div class="resume-item">
+              <h4>Curso de Marketing y ventas</h4>
+              <h5>2017</h5>
+              <p>Universidad of Chile<br>
+              Santiago de Chile</p>
+            </div><!-- Edn Resume Item -->                        
+            <div class="resume-item">
+              <h4>Diplomado Sistemas de Gestión Integral con certificación de Auditor Interno ISO 9001, 14001, 18001</h4>
+              <h5>2012</h5>
+              <p>Universidad del Desarrollo<br>
+              Santiago de Chile</p>
+            </div><!-- Edn Resume Item -->                        
+        </div>
+      </div>
+    </section><!-- /Resume Section -->
+    <div id="contact" class="separator mx-5"></div> <!-- Línea separadora --> 
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section" data-bs-spy="scroll">
+    <section  class="contact section" data-bs-spy="scroll">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2 class="text-center">Contact</h2>
-        <p>Me pueden contactar en:</p>
+        <h2 class="text-center">Contacto</h2>
+        
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade" data-aos-delay="100">
@@ -368,21 +369,19 @@
         </div>-->
         <div class="row">
           <div class="col-12 col-md-4 text-center">
-            <i class="fa-solid fa-phone fa-xl"></i>
-            <h3 class="my-3 fw-bold">teléfono y Whatsapp</h3>
+            <i class="fa-solid fa-phone fa-xl text-center"></i>
             <p class="my-3">
               +56 98230 77 88
             </p>
           </div>
           <div class="col-12 col-md-4 text-center">
-            <i class="fa-solid fa-envelope fa-xl"></i>
-            <h3 class="my-3 fw-bold">E-mail</h3>
+            <i class="fa-solid fa-envelope fa-xl text-center"></i>
             <p class="my-3">
               francisco.monroy@gmail.com
             </p>
           </div>
           <div class="col-12 col-md-4 text-center">
-            <a href="https://www.linkedin.com/in/francisco-monroy-314b5337/" target="_blank"><i class="fa-brands fa-linkedin-in fa-xl"></i></a>
+            <a href="https://www.linkedin.com/in/francisco-monroy-314b5337/" target="_blank"><i class="fa-brands fa-linkedin-in fa-xl text-center"></i></a>
 
           </div>
     

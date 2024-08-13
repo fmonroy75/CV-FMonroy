@@ -146,6 +146,18 @@ body {
  /* color: #373a3c;*/
 }
 
+#resumen{
+  text-align: justify;
+}
 a{
   text-decoration: none;
+}
+
+.separator {
+  height: 5px;
+  background-color: #dee2e6;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
