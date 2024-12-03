@@ -134,9 +134,9 @@ body {
 }*/
 
 
-
 #nav{
   background-color: #373A3C;
+  font-family: var(--nav-font)
 }
 
 /* Contacto */
@@ -160,4 +160,36 @@ a{
   margin-bottom: 50px;
   margin-left: 40px;
   margin-right: 40px;
+}
+#title {
+  color: var(--heading-color);
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: "Raleway", sans-serif;
+  /*font-weight: 700;
+  font-size: 24px;*/
+
+}
+.navbar-toggler {
+  border-color: white
+}
+.navbar-toggler:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Cambia el color de fondo al pasar el mouse */
+}
+
+.navbar-toggler:active {
+  background-color: rgba(179, 236, 240, 0.5); /* Cambia el color al hacer clic */
+}
+.nav-link {
+  color: white; /* Cambia el color de los enlaces */
+}
+
+.nav-link:hover {
+  color: #ff6600; /* Cambia el color al pasar el mouse */
+}
+#lang{
+  width: 30px;
+  height: auto;
 }
