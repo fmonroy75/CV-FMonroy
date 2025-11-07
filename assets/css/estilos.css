@@ -12,6 +12,9 @@
   --accent-color: #0563bb; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --heading-dark-color: #e0e0e0;
+  --accent-color2: #bcd8f1; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+
 }
 
 
@@ -19,6 +22,39 @@ body {
   font-family: "Raleway", sans-serif;
   
 }
+
+/*modo oscuro */
+body.dark-mode h2, body.dark-mode h3, body.dark-mode h5 {
+  color: #f1f1f1;
+}
+body.dark-mode a {
+  color: var(--accent-color2);
+}
+body.dark-mode a:hover {
+  color: #042749;
+}
+body.dark-mode .resume .resume-item h4 {
+  color: var(--heading-dark-color);
+}
+
+body.dark-mode .button[href*="github"] {
+  background-color: #333;
+  color: #fff;
+}
+body.dark-mode .button[href*="linkedin"] {
+  background-color: #0077b5;
+  color: #fff;
+}
+body.dark-mode .button[href*="gmail"],
+body.dark-mode .button[href*="mailto"] {
+  background-color: #d44638;
+  color: #fff;
+}
+body.dark-mode .button[href*="wa.me"] {
+  background-color: #25D366;
+  color: #fff;
+}
+
 
 /* Hero Section */
 
@@ -193,3 +229,63 @@ a{
   width: 30px;
   height: auto;
 }
+
+/* ---- FRAJAS PARALLAX ENTRE SECCIONES ---- */
+.parallax-divider {
+  width: 100%;
+  height: 200px; /* ajusta la altura a tu gusto */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+/* Capa sutil para oscurecer y dar contraste */
+.parallax-divider::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+    /* ---- Efecto Parallax ---- */
+    .parallax {
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+    #about.parallax { background-image: url('../assets/img/bg-about.jpg'); filter: brightness(0.7);}
+    #resume.parallax { background-image: url('../assets/img/bg-exp.webp'); filter: brightness(0.7);}
+    #studies.parallax { background-image: url('../assets/img/bg-studies.jpg');filter: brightness(0.7); }
+
+    /* ---- Botón volver arriba ---- */
+    #btnTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      font-size: 18px;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+    #btnTop:hover { background-color: #0056b3; }
+
+    /* ---- Modo oscuro ---- */
+    body.dark-mode {
+      background-color: #121212;
+      color: #e5e5e5;
+    }
+    body.dark-mode .navbar, body.dark-mode .card {
+      background-color: #1e1e1e !important;
+    }

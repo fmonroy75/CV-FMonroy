@@ -1,85 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <title>Francisco Monroy</title>
-    <script src="https://kit.fontawesome.com/8f05266059.js" crossorigin="anonymous"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css"
-      integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="stylesheet" href="../assets/css/estilos.css" />
-    <link
-    rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
-    
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Francisco Monroy H.",
-        "url": "https://[tu-dominio.com]",
-        "sameAs": [
-          "https://www.linkedin.com/in/[usuario]",
-          "https://github.com/fmonroy75"
-        ],
-        "jobTitle": "Desarrollador Web",
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Freelance"
-        }
-      }
-    </script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <body>
-    <nav id="nav" class="navbar navbar-expand-lg  fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">
-          <img src="../assets/img/logo.png" alt="" height="36px" />
+  <title>Francisco Monroy H. | Ingeniero en Informática & Desarrollador Web</title>
+
+  <!-- Fuentes y estilos -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/8f05266059.js" crossorigin="anonymous"></script>
+      <link
+    rel="stylesheet"  href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
+  <link rel="stylesheet" href="../assets/css/estilos.css" />
+  
+
+  <!-- JSON-LD para SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Francisco Monroy H.",
+    "url": "https://fmonroy75.github.io/CV-FMonroy/",
+    "sameAs": [
+      "https://www.linkedin.com/in/francisco-monroy-314b5337/",
+      "https://github.com/fmonroy75"
+    ],
+    "jobTitle": "Ingeniero en Informática / Desarrollador Web",
+    "worksFor": { "@type": "Organization", "name": "Freelance" }
+  }
+  </script>
+
+
+</head>
+
+
+  
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" tabindex="0">
+
+  <!-- Navbar fija con anclas -->
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#inicio">Francisco Monroy</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resume">Experiencia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#studies">Estudios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#prj">Proyectos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+          <li class="nav-item">
+              <a id="lang" href="index.html"><img src="../assets/img/EN.png"></a>&nbsp;
+            </li>
+            <li class="nav-item">
+              <a id="lang"  href="./es/index.html"><img src="../assets/img/ES.png"></a>&nbsp;
+            </li>
+            <li class="nav-item">
+              <a id="lang" href="./fr/index.html"><img src="../assets/img/FR.png"></a>&nbsp;
+            </li>
+        </ul>
+        <button id="darkModeToggle" class="btn btn-outline-light ms-3"><i class="fas fa-moon"></i></button>
+        <a href="../assets/files/FMonroy_CV_ESP_v2.pdf" class="btn btn-primary ms-2" download>
+          <i class="fas fa-download"></i> Descargar CV
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5">
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#about">Acerca de</a>
-            </li> 
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#resume">Curriculum</a>
-            </li>                         
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#studies">Estudios</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#contact">Contacto</a>
-            </li>
-            <li class="nav-item">
-              <a id="lang" href="../index.html"><img src="../assets/img/EN.png"></a>&nbsp;
-            </li>
-            <li class="nav-item">
-              <a id="lang"  href="index.html"><img src="../assets/img/ES.png"></a>&nbsp;
-            </li>
-            <li class="nav-item">
-              <a id="lang" href="../fr/index.html"><img src="../assets/img/FR.png"></a>&nbsp;
-            </li>
-          </ul>
-        </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
 
 <!--   <header>
@@ -114,7 +107,7 @@
             </figure>
             <h1 class="title">Francisco Monroy H.</h1>
             <p class="subtitle">
-              [Full Stack Developer | Frontend Engineer | Web Developer]
+              [Full Stack Developer |Ingeniero de sistemas | Web Developer]
             </p>
             <p class="buttons is-centered">
               <a
@@ -166,10 +159,10 @@
 
 
 
-    <div  id="about" class="separator mx-5"></div> <!-- Línea separadora --> 
+    <div  id="about" class="  separator mx-5"></div> <!-- Línea separadora --> 
     <!--<section   class="about section p-3" data-bs-spy="scroll">-->
     <!-- About Section -->
-    <section  class="about section p-3" data-bs-spy="scroll">
+    <section   class="about section p-3" data-bs-spy="scroll">
       <!-- Section Title -->
       <div class="container section-title" >
         <h2 id ="title" class="text-center">Acerca de </h2>
@@ -202,11 +195,12 @@
       </div>
     </section><!-- /About Section -->
 
+<!-- FRANJA PARALLAX -->
+<div class="parallax-divider" style="background-image: url('../assets/img/bg-exp.webp');"></div>
 
-    <div id="resume" class="separator mx-5"></div> <!-- Línea separadora --> 
-
+    
     <!-- Resume Section -->
-    <section  class="resume section" data-bs-spy="scroll">
+    <section  class=" resume section" data-bs-spy="scroll">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
@@ -343,10 +337,12 @@
       </div>
 
     </section><!-- /Resume Section -->
-    <div id="studies" class="separator mx-5"></div> <!-- Línea separadora --> 
+<!-- FRANJA PARALLAX -->
+<div class="parallax-divider" style="background-image: url('../assets/img/bg-studies.jpg');"></div>
 
+    
     <!-- Resume Section -->
-<section class="resume section p-2" data-bs-spy="scroll">
+<section class=" resume section p-2" data-bs-spy="scroll">
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
     <h2 id="title" class="text-center">Estudios</h2>
@@ -684,6 +680,16 @@
       <p class="mb-0">Francisco Monroy. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  </body>
+  <!-- Botón volver arriba -->
+  <button id="btnTop" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="../assets/js/script.js" crossorigin="anonymous"></script>
+
+</body>
 </html>
+
+
