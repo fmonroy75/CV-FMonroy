@@ -289,3 +289,34 @@ a{
     body.dark-mode .navbar, body.dark-mode .card {
       background-color: #1e1e1e !important;
     }
+
+
+    /* --- FIX PARA ACORDEÓN EN MÓVILES --- */
+
+/* Asegura que el botón del acordeón siempre sea visible */
+.accordion-button {
+  display: flex !important;
+}
+
+/* Permite que Bootstrap controle la apertura/cierre */
+.accordion-collapse.collapse {
+  display: none !important;
+}
+
+.accordion-collapse.collapse.show {
+  display: block !important;
+}
+
+/* Evita que algún contenedor del template corte el acordeón */
+.resume.section,
+#resume,
+#studies {
+  overflow: visible !important;
+}
+
+/* Columnas correctamente apiladas en móviles */
+@media (max-width: 767px) {
+  .resume .col-lg-6 {
+    width: 100% !important;
+  }
+}
