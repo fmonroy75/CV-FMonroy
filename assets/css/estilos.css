@@ -320,3 +320,240 @@ a{
     width: 100% !important;
   }
 }
+
+
+
+/*logos skill*/
+.tech-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.tech-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.8;
+}
+
+.tech-logo:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+#skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  /* Centra horizontalmente */
+  align-items: center;      /* Centra verticalmente */
+  gap: 15px;               /* Espacio entre elementos */
+  margin: 0 auto;          /* Centra el contenedor en su padre */
+  padding: 20px;
+  max-width: 1200px;       /* Ancho máximo opcional */
+}
+
+/*cards de portafolio*/
+.card-img-top {
+  height: 100px; /* Altura fija */
+  object-fit: cover; /* Recorta manteniendo proporción */
+  object-position: center; /* Enfoca el centro de la imagen */
+  width: auto; /* Ocupa todo el ancho */
+}
+
+/* Opcional: Para mantener consistencia en todas las cards */
+.card-img-top {
+  max-width: 90%; /* Deja un pequeño margen a los lados */
+  max-height: 150px; /* Controla la altura máxima */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 20px auto; /* Centra con espacio vertical */
+  background-color: white; /* Fondo blanco para imágenes con transparencia */
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+}
+
+/*imagen institucion*/
+
+/* Estilos base */
+/* ===== ESTILOS PARA MODO CLARO ===== */
+:root {
+  --card-bg-light: #ffffff;
+  --card-text-light: #212529;
+  --card-border-light: rgba(0,0,0,.125);
+  --logo-bg-light: #ffffff;
+  --logo-border-light: #dee2e6;
+  --title-color-light: #0d6efd;
+  --subtitle-color-light: #6c757d;
+  --border-color-light: #0d6efd;
+  --shadow-light: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* ===== ESTILOS PARA MODO OSCURO ===== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --card-bg-dark: #1e1e1e;
+    --card-text-dark: #e9ecef;
+    --card-border-dark: #495057;
+    --logo-bg-dark: #2d2d2d;
+    --logo-border-dark: #495057;
+    --title-color-dark: #4dabf7;
+    --subtitle-color-dark: #adb5bd;
+    --border-color-dark: #339af0;
+    --shadow-dark: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+  }
+}
+
+body.dark-mode {
+  --card-bg-light: var(--card-bg-dark);
+  --card-text-light: var(--card-text-dark);
+  --card-border-light: var(--card-border-dark);
+  --logo-bg-light: var(--logo-bg-dark);
+  --logo-border-light: var(--logo-border-dark);
+  --title-color-light: var(--title-color-dark);
+  --subtitle-color-light: var(--subtitle-color-dark);
+  --border-color-light: var(--border-color-dark);
+  --shadow-light: var(--shadow-dark);
+}
+
+/* ===== ESTILOS GENERALES ===== */
+.resume-item {
+  background-color: var(--card-bg-light);
+  border-left: 3px solid var(--border-color-light);
+  padding: 20px;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--card-border-light);
+  box-shadow: var(--shadow-light);
+  color: var(--card-text-light);
+  transition: all 0.3s ease;
+}
+
+.institution-logo {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--logo-bg-light);
+  border-radius: 8px;
+  border: 1px solid var(--logo-border-light);
+  padding: 8px;
+  box-shadow: var(--shadow-light);
+}
+
+.institution-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: none;
+}
+
+/* Ajuste de imágenes en modo oscuro */
+/*@media (prefers-color-scheme: dark) {
+ .institution-logo img {
+    filter: brightness(1.1) contrast(1.1);
+  }
+  
+  /* Para logos oscuros, invertir colores * /
+  .institution-logo img[src*=".webp"] {
+    filter: brightness(0) invert(0.9);
+  }
+}
+
+body.dark-mode .institution-logo img {
+  filter: brightness(1.1) contrast(1.1);
+}
+
+body.dark-mode .institution-logo img[src*=".webp"] {
+  filter: brightness(0) invert(0.9);
+}*/
+
+/* ===== ESTILOS DE TEXTO ===== */
+.resume-item h4 {
+  color: var(--title-color-light);
+  margin-bottom: 8px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.resume-item h5 {
+  color: var(--subtitle-color-light);
+  margin-bottom: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.resume-item p {
+  color: var(--card-text-light);
+  margin-bottom: 6px;
+  opacity: 0.95;
+}
+
+.resume-item p strong {
+  color: var(--title-color-light);
+  font-weight: 600;
+}
+
+/* ===== ACORDEÓN EN MODO OSCURO ===== */
+@media (prefers-color-scheme: dark) {
+  .accordion-item {
+    background-color: #1e1e1e;
+    border-color: #495057;
+  }
+  
+  .accordion-button {
+    background-color: #2d2d2d;
+    color: #e9ecef;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    background-color: #343a40;
+    color: #4dabf7;
+  }
+  
+  .accordion-body {
+    background-color: #252525;
+    color: #e9ecef;
+  }
+}
+
+body.dark-mode .accordion-item {
+  background-color: #1e1e1e;
+  border-color: #495057;
+}
+
+body.dark-mode .accordion-button {
+  background-color: #2d2d2d;
+  color: #e9ecef;
+}
+
+body.dark-mode .accordion-button:not(.collapsed) {
+  background-color: #343a40;
+  color: #4dabf7;
+}
+
+body.dark-mode .accordion-body {
+  background-color: #252525;
+  color: #e9ecef;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .institution-logo {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .resume-item {
+    padding: 15px;
+  }
+}
