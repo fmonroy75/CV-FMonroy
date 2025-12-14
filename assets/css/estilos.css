@@ -5,16 +5,46 @@
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #45505b; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #0563bb; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
-  --heading-dark-color: #e0e0e0;
-  --accent-color2: #bcd8f1; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+/* Estilos base */
+/* ===== ESTILOS PARA MODO CLARO ===== */
+:root {
+  --card-bg-light: #ffffff;
+  --card-text-light: #212529;
+  --card-border-light: rgba(0,0,0,.125);
+  --logo-bg-light: #ffffff;
+  --logo-border-light: #dee2e6;
+  --title-color-light: #0d6efd;
+  --subtitle-color-light: #6c757d;
+  --border-color-light: #0d6efd;
+  --shadow-light: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 
+}
+
+/* ===== ESTILOS PARA MODO OSCURO ===== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --card-bg-dark: #1e1e1e;
+    --card-text-dark: #e9ecef;
+    --card-border-dark: #495057;
+    --logo-bg-dark: #2d2d2d;
+    --logo-border-dark: #495057;
+    --title-color-dark: #4dabf7;
+    --subtitle-color-dark: #adb5bd;
+    --border-color-dark: #339af0;
+    --shadow-dark: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+  }
+}
+
+body.dark-mode {
+  --card-bg-light: var(--card-bg-dark);
+  --card-text-light: var(--card-text-dark);
+  --card-border-light: var(--card-border-dark);
+  --logo-bg-light: var(--logo-bg-dark);
+  --logo-border-light: var(--logo-border-dark);
+  --title-color-light: var(--title-color-dark);
+  --subtitle-color-light: var(--subtitle-color-dark);
+  --border-color-light: var(--border-color-dark);
+  --shadow-light: var(--shadow-dark);
 }
 
 
@@ -55,11 +85,56 @@ body.dark-mode .button[href*="wa.me"] {
   color: #fff;
 }
 
+/* ===== ACORDEÓN EN MODO OSCURO ===== */
+@media (prefers-color-scheme: dark) {
+  .accordion-item {
+    background-color: #1e1e1e;
+    border-color: #495057;
+  }
+  
+  .accordion-button {
+    background-color: #2d2d2d;
+    color: #e9ecef;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    background-color: #343a40;
+    color: #4dabf7;
+  }
+  
+  .accordion-body {
+    background-color: #252525;
+    color: #e9ecef;
+  }
+}
+
+body.dark-mode .accordion-item {
+  background-color: #1e1e1e;
+  border-color: #495057;
+}
+
+body.dark-mode .accordion-button {
+  background-color: #2d2d2d;
+  color: #e9ecef;
+}
+
+body.dark-mode .accordion-button:not(.collapsed) {
+  background-color: #343a40;
+  color: #4dabf7;
+}
+
+body.dark-mode .accordion-body {
+  background-color: #252525;
+  color: #e9ecef;
+}
+
+
 
 /* Hero Section */
 
 #Hero-Section{
-  background-image: url("../img/fondo.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+  url("../img/fondo.jpg");
   background-position: center ;
   background-repeat: no-repeat;
   background-size: cover;
@@ -68,13 +143,70 @@ body.dark-mode .button[href*="wa.me"] {
   letter-spacing: 0.7px;
   color: white;
   opacity: 100%;
+ 
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
   
   /*top: 150px;
   left: 486px;
   width: 100%;*/
+
 }
 
+Hero-Section .title {
+  color: white !important; /* Forzar color blanco */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para mejor legibilidad */
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
 
+#Hero-Section .subtitle {
+  color: rgba(255, 255, 255, 0.9) !important; /* Blanco con un poco de transparencia */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Si estás usando Bulma, puede que tenga estilos específicos */
+#Hero-Section .has-text-light .title,
+#Hero-Section .has-text-light .subtitle {
+  color: white !important;
+}
+
+/* Para el contenedor del Hero */
+#Hero-Section .container {
+  background: rgba(0, 0, 0, 0.3); /* Fondo semitransparente para contraste */
+  padding: 2rem;
+  border-radius: 10px;
+  backdrop-filter: blur(5px); /* Efecto de desenfoque (opcional) */
+}
+
+/* Si el problema persiste, usa estos estilos más específicos */
+header#Hero-Section h1.title,
+header#Hero-Section p.subtitle {
+  color: white !important;
+}
+
+/*
+#Hero-Section .container {
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1s ease-out;
+}*/
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
@@ -156,6 +288,43 @@ body.dark-mode .button[href*="wa.me"] {
 .resume .resume-item:last-child {
   padding-bottom: 0;
 }
+
+/* ===== ESTILOS DE TEXTO ===== */
+/*.accordion-body .resume-item h4 {
+  color: var(--title-color-light);
+  margin-bottom: 8px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}*/
+/* 1. H4 EN NEGRITA EN ACORDEÓN DE EXPERIENCIA */
+#accordionExpLeft .accordion-body h4,
+#accordionExpRight .accordion-body h4,
+.accordion-exp .accordion-body h4 {
+  font-weight: 700 !important;
+  color: var(--title-color-light);
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.resume-item h5 {
+  color: var(--subtitle-color-light);
+  margin-bottom: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.resume-item p {
+  color: var(--card-text-light);
+  margin-bottom: 6px;
+  opacity: 0.95;
+}
+
+.resume-item p strong {
+  color: var(--title-color-light);
+  font-weight: 600;
+}
+
 /*
 .resume .resume-item::before {
   content: "";
@@ -208,6 +377,19 @@ a{
   font-size: 24px;*/
 
 }
+
+/* Asegurar que el navbar sea completamente fijo */
+#navbar {
+  background-color: #373A3C;
+  font-family: var(--nav-font);
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  z-index: 1030 !important; /* Asegurar que esté por encima de todo */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
 .navbar-toggler {
   border-color: white
 }
@@ -220,11 +402,31 @@ a{
 }
 .nav-link {
   color: white; /* Cambia el color de los enlaces */
+  position: relative;
+  overflow: hidden;
+
 }
 
 .nav-link:hover {
   color: #ff6600; /* Cambia el color al pasar el mouse */
 }
+
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
 #lang{
   width: 30px;
   height: auto;
@@ -324,6 +526,30 @@ a{
 
 
 /*logos skill*/
+/*.skill-bar {
+  margin-bottom: 15px;
+}
+
+.skill-name {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.skill-level {
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background: var(--accent-color);
+  border-radius: 4px;
+  animation: fillBar 1.5s ease-out forwards;
+}*/
+
 .tech-logos {
   display: flex;
   flex-wrap: wrap;
@@ -357,11 +583,24 @@ a{
 }
 
 /*cards de portafolio*/
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 100%; /* Para uniformidad */
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
 .card-img-top {
-  height: 100px; /* Altura fija */
+  height: 200px; /* Altura fija */
   object-fit: cover; /* Recorta manteniendo proporción */
   object-position: center; /* Enfoca el centro de la imagen */
   width: auto; /* Ocupa todo el ancho */
+  border-bottom: 1px solid #eee;
 }
 
 /* Opcional: Para mantener consistencia en todas las cards */
@@ -381,46 +620,6 @@ a{
 
 /*imagen institucion*/
 
-/* Estilos base */
-/* ===== ESTILOS PARA MODO CLARO ===== */
-:root {
-  --card-bg-light: #ffffff;
-  --card-text-light: #212529;
-  --card-border-light: rgba(0,0,0,.125);
-  --logo-bg-light: #ffffff;
-  --logo-border-light: #dee2e6;
-  --title-color-light: #0d6efd;
-  --subtitle-color-light: #6c757d;
-  --border-color-light: #0d6efd;
-  --shadow-light: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-}
-
-/* ===== ESTILOS PARA MODO OSCURO ===== */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --card-bg-dark: #1e1e1e;
-    --card-text-dark: #e9ecef;
-    --card-border-dark: #495057;
-    --logo-bg-dark: #2d2d2d;
-    --logo-border-dark: #495057;
-    --title-color-dark: #4dabf7;
-    --subtitle-color-dark: #adb5bd;
-    --border-color-dark: #339af0;
-    --shadow-dark: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
-  }
-}
-
-body.dark-mode {
-  --card-bg-light: var(--card-bg-dark);
-  --card-text-light: var(--card-text-dark);
-  --card-border-light: var(--card-border-dark);
-  --logo-bg-light: var(--logo-bg-dark);
-  --logo-border-light: var(--logo-border-dark);
-  --title-color-light: var(--title-color-dark);
-  --subtitle-color-light: var(--subtitle-color-dark);
-  --border-color-light: var(--border-color-dark);
-  --shadow-light: var(--shadow-dark);
-}
 
 /* ===== ESTILOS GENERALES ===== */
 .resume-item {
@@ -476,75 +675,6 @@ body.dark-mode .institution-logo img[src*=".webp"] {
   filter: brightness(0) invert(0.9);
 }*/
 
-/* ===== ESTILOS DE TEXTO ===== */
-.resume-item h4 {
-  color: var(--title-color-light);
-  margin-bottom: 8px;
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
-.resume-item h5 {
-  color: var(--subtitle-color-light);
-  margin-bottom: 12px;
-  font-size: 1rem;
-  font-weight: 500;
-  opacity: 0.9;
-}
-
-.resume-item p {
-  color: var(--card-text-light);
-  margin-bottom: 6px;
-  opacity: 0.95;
-}
-
-.resume-item p strong {
-  color: var(--title-color-light);
-  font-weight: 600;
-}
-
-/* ===== ACORDEÓN EN MODO OSCURO ===== */
-@media (prefers-color-scheme: dark) {
-  .accordion-item {
-    background-color: #1e1e1e;
-    border-color: #495057;
-  }
-  
-  .accordion-button {
-    background-color: #2d2d2d;
-    color: #e9ecef;
-  }
-  
-  .accordion-button:not(.collapsed) {
-    background-color: #343a40;
-    color: #4dabf7;
-  }
-  
-  .accordion-body {
-    background-color: #252525;
-    color: #e9ecef;
-  }
-}
-
-body.dark-mode .accordion-item {
-  background-color: #1e1e1e;
-  border-color: #495057;
-}
-
-body.dark-mode .accordion-button {
-  background-color: #2d2d2d;
-  color: #e9ecef;
-}
-
-body.dark-mode .accordion-button:not(.collapsed) {
-  background-color: #343a40;
-  color: #4dabf7;
-}
-
-body.dark-mode .accordion-body {
-  background-color: #252525;
-  color: #e9ecef;
-}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
@@ -557,3 +687,5 @@ body.dark-mode .accordion-body {
     padding: 15px;
   }
 }
+
+

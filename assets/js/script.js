@@ -69,3 +69,21 @@ function loadSkills() {
 
 // Llamar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', loadSkills);
+
+//animaciones suaves en scroll
+// En script.js
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      if(targetId === '#') return;
+      
+      const targetElement = document.querySelector(targetId);
+      if(targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 80,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
