@@ -51,7 +51,8 @@ function loadSkills() {
         'assets/img/skills/django-logo.webp',  
         'assets/img/skills/wordpress.webp',
         'assets/img/skills/wix.png',
-        'assets/img/skills/logo-postgresql.png',                        
+        'assets/img/skills/logo-postgresql.png', 
+        'assets/img/skills/moodle.jpeg',                         
         // ... todas las imágenes
     ];
     
