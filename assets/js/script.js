@@ -41,7 +41,7 @@ function loadSkills() {
         'assets/img/skills/CSS3_Logo.png',
         'assets/img/skills/JavaScript-logo.png',
         'assets/img/skills/jquery-logo.webp',
-        'assets/img/skills/bootstrap-logo.png',
+        'assets/img/skills/bootstrap-logo.jpg',
         'assets/img/skills/murex-logo.webp',
         'assets/img/skills/peoplesoft-logo.png',
         'assets/img/skills/php-logo.webp',
