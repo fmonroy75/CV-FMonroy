@@ -17,6 +17,7 @@
   --subtitle-color-light: #1e1f20;
   --border-color-light: #0d6efd;
   --shadow-light: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --accent-color: #1abc9c;
 
 }
 
@@ -59,6 +60,16 @@ body {
 }
 
 /*modo oscuro */
+
+    /* ---- Modo oscuro ---- */
+    body.dark-mode {
+      background-color: #121212;
+      color: #e5e5e5;
+    }
+    body.dark-mode .navbar, body.dark-mode .card {
+      background-color: #1e1e1e !important;
+    }
+
 body.dark-mode h2, body.dark-mode h3, body.dark-mode h5 {
   color: #f1f1f1;
 }
@@ -134,7 +145,6 @@ body.dark-mode .accordion-body {
 }
 
 
-
 /* Hero Section */
 
 #Hero-Section{
@@ -168,7 +178,7 @@ Hero-Section .title {
   margin-bottom: 1rem;
 }
 
-#Hero-Section .subtitle {
+Hero-Section .subtitle {
   color: rgba(255, 255, 255, 0.9) !important; /* Blanco con un poco de transparencia */
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
   font-size: 1.5rem;
@@ -362,7 +372,7 @@ header#Hero-Section p.subtitle {
 a{
   text-decoration: none;
 }
-
+/*
 .separator {
   height: 5px;
   background-color: #dee2e6;
@@ -370,7 +380,7 @@ a{
   margin-bottom: 50px;
   margin-left: 40px;
   margin-right: 40px;
-}
+}*/
 #title {
   color: var(--heading-color);
   font-size: 26px;
@@ -488,15 +498,6 @@ a{
     }
     #btnTop:hover { background-color: #0056b3; }
 
-    /* ---- Modo oscuro ---- */
-    body.dark-mode {
-      background-color: #121212;
-      color: #e5e5e5;
-    }
-    body.dark-mode .navbar, body.dark-mode .card {
-      background-color: #1e1e1e !important;
-    }
-
 
     /* --- FIX PARA ACORDEÓN EN MÓVILES --- */
 
@@ -606,6 +607,7 @@ a{
   object-position: center; /* Enfoca el centro de la imagen */
   width: auto; /* Ocupa todo el ancho */
   border-bottom: 1px solid #eee;
+  
 }
 
 /* Opcional: Para mantener consistencia en todas las cards */
@@ -843,3 +845,33 @@ body.dark-mode .resume .accordion-button:hover {
 }
 
 
+        /* Section Styles */
+        .section-title {
+          position: relative;
+          padding-bottom: 15px;
+          margin-bottom: 40px;
+          text-align: center;
+      }
+      
+      .section-title:after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 80px;
+          height: 4px;
+          background-color: var(--accent-color);
+      }
+      
+      .section-dark {
+          background-color: #f1f5f9;
+          padding: 80px 0;
+      }
+      
+      .section-light {
+          padding: 80px 0;
+      }
+
+
+      
